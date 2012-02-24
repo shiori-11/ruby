@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+    <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+    <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+    <depends_on path='/System/Library/Frameworks/Security.framework'/>
+    <cftype name='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
+    <function name='DCSCopyTextDefinition'>
+        <arg type='^{__DCSDictionary=}'/>
+        <arg type='^{__CFString=}'/>
+        <arg type='{_CFRange=ii}' type64='{_CFRange=qq}'/>
+        <retval type='^{__CFString=}'/>
+    </function>
+    <function name='DCSGetTermRangeInString'>
+        <arg type='^{__DCSDictionary=}'/>
+        <arg type='^{__CFString=}'/>
+        <arg type='l' type64='q'/>
+        <retval type='{_CFRange=ii}' type64='{_CFRange=qq}'/>
+    </function>
+    <function name='DCSCopyAvailableDictionaries'>
+        <retval type='^{__CFArray=}'/>
+    </function>
+    <function name='DCSGetActiveDictionaries'>
+        <retval type='^{__CFArray=}'/>
+    </function>
+    <function name='DCSGetDefaultDictionary'>
+        <retval type='^{__DCSDictionary=}'/>
+    </function>
+    <function name='DCSDictionaryCreate'>
+        <arg type='^{__CFURL=}'/>
+        <retval type='^{__DCSDictionary=}'/>
+    </function>
+    <function name='DCSDictionaryGetName'>
+        <arg type='^{__DCSDictionary=}'/>
+        <retval type='^{__CFString=}'/>
+    </function>
+    <function name='DCSDictionaryGetShortName'>
+        <arg type='^{__DCSDictionary=}'/>
+        <retval type='^{__CFString=}'/>
+    </function>
+    <function name='DCSDictionaryGetURL'>
+        <arg type='^{__DCSDictionary=}'/>
+        <retval type='^{__CFURL=}'/>
+    </function>
+    <function name='DCSCopyRecordsForSearchString'>
+        <arg type='^{__DCSDictionary=}'/>
+        <arg type='^{__CFString=}'/>
+        <arg type='L'/>
+        <arg type='L'/>
+        <retval type='^{__CFArray=}'/>
+    </function>
+    <function name='DCSRecordCopyData'>
+        <arg type='@'/>
+        <retval type='^{__CFData=}'/>
+    </function>
+    <function name='DCSRecordGetDictionary'>
+        <arg type='@'/>
+        <retval type='^{__DCSDictionary=}'/>
+    </function>
+    <function name='DCSRecordGetHeadword'>
+        <arg type='@'/>
+        <retval type='^{__CFString=}'/>
+    </function>
+    <function name='DCSRecordGetString'>
+        <arg type='@'/>
+        <retval type='^{__CFString=}'/>
+    </function>
+</signatures>
